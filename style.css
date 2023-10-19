@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  ;
+}
+
+/* loading spinner  */
+.spinner-wrapper {
+  background: rgb(255 255 255);
+  opacity: 0.9;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+/*home page */
+#home {
+  background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(images/banner.jpg);
+  background-size: 100% 100%;
+  object-fit: cover;
+  position: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#home h1 {
+  font-size: 100px;
+  color: white;
+  letter-spacing: 3px;
+  font-family: 'Dancing Script';
+  text-shadow: 0px 1px 0px #ccc,
+    0px 2px 0px #ccc,
+    0px 3px 0px #ccc,
+    0px 4px 0px #ccc,
+    0px 5px 0px #ccc,
+    0px 6px 0px #ccc,
+    0px 7px 0px #ccc;
+}
+
+#home p {
+  font-size: 18px;
+  color: white;
+
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+
+  opacity: 0.7;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.carousel-item {
+  color: #fff !important;
+}
+
+
+/* carousel side screen */
+@media screen and (min-width:992px) {
+  .cards-wrapper {
+    display: flex;
+  }
+
+  .slide .card {
+    margin: 0.5em;
+    width: calc(100%/5);
+  }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+  .slide .card:not(:nth-child(-n+3)) {
+    display: none;
+  }
+
+  .cards-wrapper {
+    display: flex;
+  }
+
+  .slide .card {
+    margin: 0.5em;
+    width: calc(100%/3);
+  }
+}
+
+@media screen and (max-width:768px) {
+  .slide .card:not(:first-child) {
+    display: none;
+  }
+}
+
+.card {
+  text-align: center;
+  align-items: center;
+  font-size: medium;
+
+}
+
+.card .btn {
+  font-size: small;
+
+  margin-top: auto;
+}
+
+h2 {
+  color: #000;
+  font-size: 26px;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  margin: 10px 0 30px;
+}
+
+h2 b {
+  color: gold;
+}
